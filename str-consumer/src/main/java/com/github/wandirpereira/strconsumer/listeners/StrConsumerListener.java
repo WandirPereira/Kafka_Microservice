@@ -30,8 +30,8 @@ public class StrConsumerListener {
         log.info("LOG ::: Receive message {}", message);
     }
 
-//    @KafkaListener(groupId = "group-2", topics = "str-topic",  containerFactory = "strContainerFactory")
-    @StrConsumerCustomListener(groupId = "group-1")
+    @KafkaListener(groupId = "group-2", topics = "str-topic",  containerFactory = "validMessageContainerFactory")
+    //@StrConsumerCustomListener(groupId = "group-1")
     public void history(String message){
         log.info("HISTORY ::: Receive message {}", message);
     }
